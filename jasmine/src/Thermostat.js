@@ -14,3 +14,6 @@ Thermostat.prototype.decreaseTemperature = function() {
   this.temperature--
 };
 
+Thermostat.prototype.resetTemperature = function() {
+  this.temperature = 20
+};
