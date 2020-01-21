@@ -31,4 +31,10 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(18);
   });
 
+  it('displays an error if temperature is less than 10 degrees', function() {
+    thermostat.temperature = 10;
+    console.log(thermostat.temperature)
+    expect( function() {thermostat.decreaseTemperature()}).toThrowError('brrr, that seems a bit nippy!');
+  })
+
 });
