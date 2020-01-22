@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <head>
+    <title>Thermostat</title>
+    <link type='text/css' rel='stylesheet' href='./public/css/style.css'>  
+    <!-- Shaun's starts from thermostat instead of public -->
+  </head>
+  <body>
+    <div id="current-temp">
+      <div id="current-temp-header">
+        Current Temp
+      </div>
+      <div id="current-temp-display">
+        temp goes here
+        <!---INSERT CURRENT TEMP JS-->
+      </div>
+    </div>
+
+    <button id="temp-up">+</button>
+    <button id="temp-down">-</button>
+    <button id="temp-reset">Reset</button>
+
+    <div id="power-saving-mode">
+      <div id="power-saving-mode-header">
+        Power Saving Mode:
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
+  </div>
+    <h4>Current Energy Usage</h4>
+    <!---INSERT CURRENT TEMP-->
+    <script src="src/Thermostat.js"></script>
+  </body>
+</html>
