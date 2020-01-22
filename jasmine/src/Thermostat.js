@@ -1,15 +1,19 @@
 function Thermostat() {
   this.temperature = 20;
   this.maxTemp ;
+  this.powerSavingMode('on') ;
 }
 
 Thermostat.prototype.increaseTemperature = function() {
+  if (this.temperature === this.maxTemp) {
+    throw new Error('temperature over maximum')
+  }
   this.temperature++
 };
 
 Thermostat.prototype.decreaseTemperature = function() {
   if (this.temperature === 10) {
-    throw new TypeError('brrr, that seems a bit nippy!');
+    throw new Error('brrr, that seems a bit nippy!');
   }
 
   this.temperature--
