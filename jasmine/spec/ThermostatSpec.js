@@ -43,4 +43,14 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(20);
   })
 
+  it('has power saving mode on', function() {
+    thermostat.powerSavingMode('on')
+    expect(thermostat.maxTemp).toEqual(25);
+  })
+
+  it('power saving mode off', function() {
+    thermostat.powerSavingMode('off')
+    expect(thermostat.maxTemp).toEqual(32);
+  })
+
 });
