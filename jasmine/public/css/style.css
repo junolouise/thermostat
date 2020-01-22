@@ -12,8 +12,8 @@ body {
 
 #current-temp-header {
   font-size: 50px;
-  color: rgb(243, 150, 166);
 }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -89,12 +89,30 @@ button:hover {
 }
 
 #current-temp-display {
-  width: 25%;
+  width: 10%;
+  height: 60px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   margin: auto;
+  font-size: 40px;
+
+}
+
+#temperature {
+  padding: 5%;
 }
 
 #power-saving-mode {
   font-size: 25px;
+}
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
 }

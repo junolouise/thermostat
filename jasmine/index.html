@@ -1,6 +1,8 @@
 <!DOCTYPE html>
   <head>
+    <script src="jquery-3.4.1.js"></script>
     <title>Thermostat</title>
+
     <link type='text/css' rel='stylesheet' href='./public/css/style.css'>  
     <!-- Shaun's starts from thermostat instead of public -->
   </head>
@@ -10,8 +12,9 @@
         Current Temp
       </div>
       <div id="current-temp-display">
-        temp goes here
-        <!---INSERT CURRENT TEMP JS-->
+        <div id="temperature">
+          
+        </div>
       </div>
     </div>
 
@@ -22,15 +25,21 @@
     <div id="power-saving-mode">
       <div id="power-saving-mode-header">
         Power Saving Mode:
-    </div>
+      </div>
+      <button id="psm-on">On</button>
+      <button id="psm-off">Off</button>
 
-    <label class="switch">
+
+    <!-- <label class="switch">
       <input type="checkbox" checked>
       <span class="slider round"></span>
-    </label>
+    </label> -->
   </div>
     <h4>Current Energy Usage</h4>
+    <div id='current-energy-usage'>
+    </div>
     <!---INSERT CURRENT TEMP-->
     <script src="src/Thermostat.js"></script>
+    <script src="src/interface.js"></script>
   </body>
 </html>
