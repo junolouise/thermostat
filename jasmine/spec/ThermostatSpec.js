@@ -88,4 +88,24 @@ describe("Thermostat", function() {
     })
   })
 
+  describe('Current Energy Usage', function() {
+    it('displays low usage when temperature is less than 18 degrees', function() {
+      for (var loopcounter = 0; loopcounter < 5; loopcounter++ ) {
+        thermostat.decreaseTemperature()
+      }
+      expect(thermostat.currentEnergyUsage()).toEqual('low-usage')
+    })
+
+    it('displays medium usage when temperature is less than 25 degrees', function() {
+      expect(thermostat.currentEnergyUsage()).toEqual('medium-usage')
+    })
+
+    it('displays high usage when temperature is more than 25 degrees', function() {
+      thermostat.powerSavingMode('off')
+      for (var loopcounter = 0; loopcounter < 10; loopcounter++ ) {
+        thermostat.increaseTemperature()
+      }
+      expect(thermostat.currentEnergyUsage()).toEqual('high-usage')
+    })
+  })
 });
